@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="GalleryPhoto/Emblem_of_the_Galactic_Republic.svg">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .main-content-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        #mainContentFrame {
+            width: 100%;
+            border: none;
+            min-height: 500px;
+            overflow: hidden;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        .carousel-control-prev:hover .carousel-control-prev-icon,
+        .carousel-control-next:hover .carousel-control-next-icon {
+            opacity: 1;
+        }
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+        body.sticky-nav-active {
+            padding-top: 56px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <header id="mainHeader">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="GalleryPhoto/Screenshot (258).png" class="d-block w-100"
+                            alt="Banner 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="GalleryPhoto/Screenshot (92).png" class="d-block w-100"
+                            alt="Banner 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="GalleryPhoto/Screenshot (230).png" class="d-block w-100"
+                            alt="Banner 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </header>
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html" target="mainContentFrame">
+                    <img src="GalleryPhoto/Emblem_of_the_Galactic_Republic.svg" alt="Logo" style="height: 30px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html" target="mainContentFrame">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="study.html" target="mainContentFrame">MyStudy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html" target="mainContentFrame">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="datatables.html" target="mainContentFrame">Datatable</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html" target="mainContentFrame">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid mt-3 mb-3 main-content-wrapper">
+            <div class="row flex-grow-1">
+                <aside class="col-lg-3 col-md-4 mt-3 mb-3">
+                    <div class="card sticky-sidebar">
+                        <div class="card-header">
+                            Link Eksternal
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="https://nfacademy.id/" target="_blank">NF Academy</a>
+                            </li>
+                            <li class="list-group-item"><a href="https://nurulfikri.ac.id/" target="_blank">Nurul Fikri</a>
+                            </li>
+                            <li class="list-group-item"><a href="https://getbootstrap.com/"
+                                    target="_blank">Bootstrap</a></li>
+                            <li class="list-group-item"><a href="https://github.com/" target="_blank">GitHub</a></li>
+                            <li class="list-group-item"><a href="https://www.w3schools.com/"
+                                    target="_blank">W3Schools</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <main class="col-lg-9 col-md-8">
+                    <iframe src="home.html" name="mainContentFrame" id="mainContentFrame" class="w-100"
+                        onload="adjustIframeHeight(this)"></iframe>
+                </main>
+            </div>
+        </div>
+        <footer class="bg-dark text-white text-center py-3 mt-auto">
+            <div class="container">
+                <p class="mb-1">Dibuat oleh: Rafly Dzakki Pratama - UPN Veteran Jakarta &copy; 2025</p>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=61562407194211" target="_blank" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/refly4u" target="_blank" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/refly4u/" target="_blank" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/raflydzakkipratama/" target="_blank" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+    <script>
+        const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+        const mainContentFrame = document.getElementById('mainContentFrame');
+        const navbarBrand = document.querySelector('.navbar-brand');
+        function updateActiveNav() {
+            const currentSrc = mainContentFrame.contentWindow.location.pathname.split('/').pop();
+            navLinks.forEach(link => link.classList.remove('active'));
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentSrc) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        function onIframeLoad() {
+            updateActiveNav();
+            setTimeout(() => {
+                try {
+                    mainContentFrame.style.height = 'auto';
+                    const newHeight = mainContentFrame.contentWindow.document.documentElement.scrollHeight;
+                    mainContentFrame.style.height = newHeight + 'px';
+                    const hash = mainContentFrame.contentWindow.location.hash;
+                    if (hash) {
+                        const targetElement = mainContentFrame.contentWindow.document.querySelector(hash);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                } catch (e) {
+                    console.warn("Gagal menyesuaikan iframe:", e);
+                }
+            }, 0);
+        }
+        mainContentFrame.addEventListener('load', onIframeLoad);
+        navbarBrand.addEventListener('click', () => {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === 'home.html') {
+                    link.classList.add('active');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const defaultNavLink = document.querySelector('.navbar-nav .nav-link[href="home.html"]');
+            if (defaultNavLink) {
+                defaultNavLink.classList.add('active');
+            }
+        });
+        window.addEventListener('resize', onIframeLoad);
+    </script>
+</body>
+</html>

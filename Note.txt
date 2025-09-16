@@ -1,0 +1,1 @@
+Saya menggunakan ekstensi Live Server agar JavaScript yang saya gunakan untuk mengatur ulang ukuran Main Content dapat bekerja.
